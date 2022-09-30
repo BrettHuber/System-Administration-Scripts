@@ -1,4 +1,5 @@
 # !/usr/bin/env python3
+# Executable permissions set
 # Name: Brett Huber
 # Date: 24 September 2022
 
@@ -22,8 +23,8 @@ output = "" # Creates the global output variable
 
 def printDeviceInfo():
     global output # Allows the global output variable to be updated 
-    host = socket.gethostname() # Gets the hostname and sets it equal to the host variable
-    domain = socket.getfqdn() # Gets the domain and sets it equal to the domain variable
+    host = subprocess.check_output(["hostname","--short"], universal_newlines = True).replace('\n', '') # Gets the hostname and sets it equal to the host variable
+    domain = subprocess.check_output(["hostname","-d"], universal_newlines = True).replace('\n', '') # Gets the domain and sets it equal to the domain variable
     
     # Prints out the device information and variables
     print("Hostname:", host)
@@ -181,7 +182,7 @@ def main():
     printDeviceInfo()
 
     # Prints out the network information title and calls the function to print out corresponding information
-    print("\nNetwork Information:\n")
+    print("\n\033[92mNetwork Information:\033[0m\n")
     output += "\nNetwork Information:\n"
     printNetworkInfo()
 
@@ -206,7 +207,7 @@ def main():
     printMemoryInfo()
 
     homeDirPath = os.path.expanduser('~') # Gets the path to the user home directory
-    hostName = socket.gethostname() # Gets the host name
+    hostName = subprocess.check_output(["hostname","--short"], universal_newlines = True).replace('\n', '') # Gets the host name
     sysReport = "_system_report" # Creates a sys report variable
     extension = "log" # Creates a variable for the file extension
     fileName = f'{hostName}{sysReport}.{extension}' # Constructs the file name
