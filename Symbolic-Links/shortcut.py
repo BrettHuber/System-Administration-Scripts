@@ -7,9 +7,7 @@
 from macpath import islink
 import os
 
-# If the OS is Windows cls will clear the terminal
-# If the OS is Unix clear will clear the terminal
-os.system('cls' if os.name == 'nt' else 'clear')
+os.system('cls' if os.name == 'nt' else 'clear') # Clears the terminal
 
 symboMenu = {
     '1   ': 'Make a symbolic link',
