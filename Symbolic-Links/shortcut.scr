@@ -1,251 +1,0 @@
-Script started on 2021-06-17 08:24:49-04:00
-]777;notify;Command completed;ls]0;student@linclient:~/scripts/script03]7;file://linclient.gpavks.com/home/student/scripts/script03[student@linclient script03]$ ./shortcut.py 
-[3J[H[2J	************************************************
-	***************[92m Shortcut Creater [0m***************
-	************************************************
-
-
-Enter Selection:
-
-	1 - Create a shortcut in your home directory.
-	2 - Remove a shortcut from your home directory.
-	3 - Run shortcut report.
-
-Please enter a [1m[92mnumber (1-3)[0m or[1m[92m "Q/q" [0mto quit the program.	1
-[3J[H[2JPlease enter the file name to create a shortcut:	test.txt
-Found [92m/home/student/scripts/script01/test.txt[0m. Select Y/y to create shortcut.	Y
-Creating Shortcut, please wait.
-
-[                    ] 0%[=                   ] 5%[==                  ] 10%[===                 ] 15%[====                ] 20%[=====               ] 25%[======              ] 30%[=======             ] 35%[========            ] 40%[=========           ] 45%[==========          ] 50%[===========         ] 55%[============        ] 60%[=============       ] 65%[==============      ] 70%[===============     ] 75%[================    ] 80%[=================   ] 85%[==================  ] 90%[=================== ] 95%[====================] 100%
-
-Shortcut created. Returning to Main Menu.
-[3J[H[2J	************************************************
-	***************[92m Shortcut Creater [0m***************
-	************************************************
-
-
-Enter Selection:
-
-	1 - Create a shortcut in your home directory.
-	2 - Remove a shortcut from your home directory.
-	3 - Run shortcut report.
-
-Please enter a [1m[92mnumber (1-3)[0m or[1m[92m "Q/q" [0mto quit the program.	3
-[3J[H[2JGenerating Report. Please wait...
-[3J[H[2J	************************************************
-	***************[92m Shortcut  Report [0m***************
-	************************************************
-
-
-You current directory is [93m/home/student[0m.
-
-
-The number of links is [93m3[0m.
-
-[4m[93mSymbolic Link		Target Path[0m
-test.txt		/home/student/scripts/script01/test.txt
-test02.txt		/tmp/test02.txt
-test03.txt		/tmp/test03.txt
-
-To return to the [93mMain Menu[0m, press [93mEnter. [0mOr select [93mR/r[0m to remove a link.
-
-[A                          [A
-[3J[H[2J
-Returning to [93mMain Menu[0m shortly. Please wait...
-[                    ] 0%[=                   ] 5%[==                  ] 10%[===                 ] 15%[====                ] 20%[=====               ] 25%[======              ] 30%[=======             ] 35%[========            ] 40%[=========           ] 45%[==========          ] 50%[===========         ] 55%[============        ] 60%[=============       ] 65%[==============      ] 70%[===============     ] 75%[================    ] 80%[=================   ] 85%[==================  ] 90%[=================== ] 95%[====================] 100%
-
-[3J[H[2J	************************************************
-	***************[92m Shortcut Creater [0m***************
-	************************************************
-
-
-Enter Selection:
-
-	1 - Create a shortcut in your home directory.
-	2 - Remove a shortcut from your home directory.
-	3 - Run shortcut report.
-
-Please enter a [1m[92mnumber (1-3)[0m or[1m[92m "Q/q" [0mto quit the program.	2
-[3J[H[2JPlease enter the shortcut/link to remove:	test.txt
-
-Are you sure you want remove [92mtest.txt[0m? Press [92mY/y[0m to confirm:	y
-Removing link, please wait...
-[                    ] 0%[=                   ] 5%[==                  ] 10%[===                 ] 15%[====                ] 20%[=====               ] 25%[======              ] 30%[=======             ] 35%[========            ] 40%[=========           ] 45%[==========          ] 50%[===========         ] 55%[============        ] 60%[=============       ] 65%[==============      ] 70%[===============     ] 75%[================    ] 80%[=================   ] 85%[==================  ] 90%[=================== ] 95%[====================] 100%
-
-Link removed, returning to Main Menu.
-[3J[H[2J	************************************************
-	***************[92m Shortcut Creater [0m***************
-	************************************************
-
-
-Enter Selection:
-
-	1 - Create a shortcut in your home directory.
-	2 - Remove a shortcut from your home directory.
-	3 - Run shortcut report.
-
-Please enter a [1m[92mnumber (1-3)[0m or[1m[92m "Q/q" [0mto quit the program.	3
-[3J[H[2JGenerating Report. Please wait...
-[3J[H[2J	************************************************
-	***************[92m Shortcut  Report [0m***************
-	************************************************
-
-
-You current directory is [93m/home/student[0m.
-
-
-The number of links is [93m2[0m.
-
-[4m[93mSymbolic Link		Target Path[0m
-test02.txt		/tmp/test02.txt
-test03.txt		/tmp/test03.txt
-
-To return to the [93mMain Menu[0m, press [93mEnter. [0mOr select [93mR/r[0m to remove a link.
-
-[A                          [A
-[3J[H[2J
-Returning to [93mMain Menu[0m shortly. Please wait...
-[                    ] 0%[=                   ] 5%[==                  ] 10%[===                 ] 15%[====                ] 20%[=====               ] 25%[======              ] 30%[=======             ] 35%[========            ] 40%[=========           ] 45%[==========          ] 50%[===========         ] 55%[============        ] 60%[=============       ] 65%[==============      ] 70%[===============     ] 75%[================    ] 80%[=================   ] 85%[==================  ] 90%[=================== ] 95%[====================] 100%
-
-[3J[H[2J	************************************************
-	***************[92m Shortcut Creater [0m***************
-	************************************************
-
-
-Enter Selection:
-
-	1 - Create a shortcut in your home directory.
-	2 - Remove a shortcut from your home directory.
-	3 - Run shortcut report.
-
-Please enter a [1m[92mnumber (1-3)[0m or[1m[92m "Q/q" [0mto quit the program.	3
-[3J[H[2JGenerating Report. Please wait...
-[3J[H[2J	************************************************
-	***************[92m Shortcut  Report [0m***************
-	************************************************
-
-
-You current directory is [93m/home/student[0m.
-
-
-The number of links is [93m2[0m.
-
-[4m[93mSymbolic Link		Target Path[0m
-test02.txt		/tmp/test02.txt
-test03.txt		/tmp/test03.txt
-
-To return to the [93mMain Menu[0m, press [93mEnter. [0mOr select [93mR/r[0m to remove a link.
-
-[A                          [A
-[3J[H[2J
-Returning to [93mMain Menu[0m shortly. Please wait...
-[                    ] 0%[=                   ] 5%[==                  ] 10%[===                 ] 15%[====                ] 20%[=====               ] 25%[======              ] 30%[=======             ] 35%[========            ] 40%[=========           ] 45%[==========          ] 50%[===========         ] 55%[============        ] 60%[=============       ] 65%[==============      ] 70%[===============     ] 75%[================    ] 80%[=================   ] 85%[==================  ] 90%[=================== ] 95%[====================] 100%
-
-[3J[H[2J	************************************************
-	***************[92m Shortcut Creater [0m***************
-	************************************************
-
-
-Enter Selection:
-
-	1 - Create a shortcut in your home directory.
-	2 - Remove a shortcut from your home directory.
-	3 - Run shortcut report.
-
-Please enter a [1m[92mnumber (1-3)[0m or[1m[92m "Q/q" [0mto quit the program.	1
-[3J[H[2JPlease enter the file name to create a shortcut:	dfkljhghkwhgreijke
-Searching, please wait...	
-[                    ] 0%[=                   ] 5%[==                  ] 10%[===                 ] 15%[====                ] 20%[=====               ] 25%[======              ] 30%[=======             ] 35%[========            ] 40%[=========           ] 45%[==========          ] 50%[===========         ] 55%[============        ] 60%[=============       ] 65%[==============      ] 70%[===============     ] 75%[================    ] 80%[=================   ] 85%[==================  ] 90%[=================== ] 95%[====================] 100%
-
-
-Sorry, couldn't find [92mdfkljhghkwhgreijke[0m!
-Returning to Main Menu
-[3J[H[2J	************************************************
-	***************[92m Shortcut Creater [0m***************
-	************************************************
-
-
-Enter Selection:
-
-	1 - Create a shortcut in your home directory.
-	2 - Remove a shortcut from your home directory.
-	3 - Run shortcut report.
-
-Please enter a [1m[92mnumber (1-3)[0m or[1m[92m "Q/q" [0mto quit the program.	2
-[3J[H[2JPlease enter the shortcut/link to remove:	klhjlfsadnkjahfds
-Searching, please wait...	
-[                    ] 0%[=                   ] 5%[==                  ] 10%[===                 ] 15%[====                ] 20%[=====               ] 25%[======              ] 30%[=======             ] 35%[========            ] 40%[=========           ] 45%[==========          ] 50%[===========         ] 55%[============        ] 60%[=============       ] 65%[==============      ] 70%[===============     ] 75%[================    ] 80%[=================   ] 85%[==================  ] 90%[=================== ] 95%[====================] 100%
-
-Sorry, couldn't find [91m[5mklhjlfsadnkjahfds[0m!
-Returning to Main Menu
-[3J[H[2J	************************************************
-	***************[92m Shortcut Creater [0m***************
-	************************************************
-
-
-Enter Selection:
-
-	1 - Create a shortcut in your home directory.
-	2 - Remove a shortcut from your home directory.
-	3 - Run shortcut report.
-
-Please enter a [1m[92mnumber (1-3)[0m or[1m[92m "Q/q" [0mto quit the program.	2
-[3J[H[2JPlease enter the shortcut/link to remove:	text04.txt
-Searching, please wait...	
-[                    ] 0%[=                   ] 5%[==                  ] 10%[===                 ] 15%[====                ] 20%[=====               ] 25%[======              ] 30%[=======             ] 35%[========            ] 40%[=========           ] 45%[==========          ] 50%[===========         ] 55%[============        ] 60%[=============       ] 65%[==============      ] 70%[===============     ] 75%[================    ] 80%[=================   ] 85%[==================  ] 90%[=================== ] 95%[====================] 100%
-
-Sorry, couldn't find [91m[5mtext04.txt[0m!
-Returning to Main Menu
-[3J[H[2J	************************************************
-	***************[92m Shortcut Creater [0m***************
-	************************************************
-
-
-Enter Selection:
-
-	1 - Create a shortcut in your home directory.
-	2 - Remove a shortcut from your home directory.
-	3 - Run shortcut report.
-
-Please enter a [1m[92mnumber (1-3)[0m or[1m[92m "Q/q" [0mto quit the program.	3
-[3J[H[2JGenerating Report. Please wait...
-[3J[H[2J	************************************************
-	***************[92m Shortcut  Report [0m***************
-	************************************************
-
-
-You current directory is [93m/home/student[0m.
-
-
-The number of links is [93m2[0m.
-
-[4m[93mSymbolic Link		Target Path[0m
-test02.txt		/tmp/test02.txt
-test03.txt		/tmp/test03.txt
-
-To return to the [93mMain Menu[0m, press [93mEnter. [0mOr select [93mR/r[0m to remove a link.
-
-[A                          [A
-[3J[H[2J
-Returning to [93mMain Menu[0m shortly. Please wait...
-[                    ] 0%[=                   ] 5%[==                  ] 10%[===                 ] 15%[====                ] 20%[=====               ] 25%[======              ] 30%[=======             ] 35%[========            ] 40%[=========           ] 45%[==========          ] 50%[===========         ] 55%[============        ] 60%[=============       ] 65%[==============      ] 70%[===============     ] 75%[================    ] 80%[=================   ] 85%[==================  ] 90%[=================== ] 95%[====================] 100%
-
-[3J[H[2J	************************************************
-	***************[92m Shortcut Creater [0m***************
-	************************************************
-
-
-Enter Selection:
-
-	1 - Create a shortcut in your home directory.
-	2 - Remove a shortcut from your home directory.
-	3 - Run shortcut report.
-
-Please enter a [1m[92mnumber (1-3)[0m or[1m[92m "Q/q" [0mto quit the program.	q
-[3J[H[2J
-Quiting program: returning to shell.
-[93m[5m 
-Have a wonderful day![0m
-[3J[H[2J]777;notify;Command completed;./shortcut.py ]0;student@linclient:~/scripts/script03]7;file://linclient.gpavks.com/home/student/scripts/script03[student@linclient script03]$ exit
-
-Script done on 2021-06-17 08:26:40-04:00
