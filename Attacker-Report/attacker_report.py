@@ -5,7 +5,10 @@
 
 # Variable
 import os
+import re
 from datetime import date
+
+ipFormat = re.compile(r'(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})')
 
 os.system('cls' if os.name == 'nt' else 'clear') # Clears the terminal
 class Fail:
@@ -15,51 +18,40 @@ class Fail:
         self.ipCountry = ipCountry
 
 
-def countAttacks(logName):
-    lineNum = 0
-    
+def countAttacks(logName):    
     fails = []
-    lineContent = []
     with open(logName, 'r') as file:
         line = file.readline()
         while line:
             line = file.readline()
             if "Failed" in line:
-                lineContent = line.split()
+                lineIP = ipFormat.search(line)[0]
                 if len(fails) == 0:
-                    # failedAttempt = Fail(lineContent[10],"US")
-                    # failedAttempt.failCount += 1
-                    print(lineContent[10])
-                    fails.append(Fail(lineContent[10],"US"))
+                    fails.append(Fail(lineIP,"US"))
                 elif len(fails) == 1:
-                    if lineContent[10] == getattr(fails[0], 'ipNumber'):
+                    if  lineIP == getattr(fails[0], 'ipNumber'):
                         newCount = getattr(fails[0], 'failCount')
                         newCount += 1
                         setattr(fails[0], 'failCount', newCount)
                     else: 
-                        # failedAttempt = Fail(lineContent[10],"US")
-                        # failedAttempt.failCount += 1
-                        print(lineContent[10])
-                        break
-                        fails.append(Fail(lineContent[10],"US"))
+                        fails.append(Fail(lineIP,"US"))
                 else:
                     checkCount = 0
                     for x in range(len(fails)):
-                        if lineContent[10] == getattr(fails[x], 'ipNumber'):
+                        if lineIP == getattr(fails[x], 'ipNumber'):
                             checkCount = x
                     if checkCount == 0:
-                        # failedAttempt = Fail(lineContent[10],"US")
-                        # failedAttempt.failCount += 1
-                        fails.append(Fail(lineContent[10],"US"))
+                        fails.append(Fail(lineIP,"US"))
                     else:
                         newCount = getattr(fails[x], 'failCount')
                         newCount += 1
                         setattr(fails[x], 'failCount', newCount)   
 
 
-
+    print("\nSize: " +str(len(fails)))
     for obj in fails:
-        print("IP: " + getattr(obj, 'ipNumber') + "    FailCount: " + str(getattr(obj, 'failCount')) + "\n")        
+        if getattr(obj, 'failCount') >= 10:
+           print("IP: " + getattr(obj, 'ipNumber') + "    FailCount: " + str(getattr(obj, 'failCount')) + "\n")        
 
 
             # lineNum += 1
