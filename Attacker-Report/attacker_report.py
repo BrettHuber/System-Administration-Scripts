@@ -24,12 +24,12 @@ def countAttacks(logName):
         line = file.readline()
         while line:
             line = file.readline()
-            if "Failed" in line:
+            if "Failed password" in line:
                 lineIP = ipFormat.search(line)[0]
                 if len(fails) == 0:
                     fails.append(Fail(lineIP,"US"))
                 elif len(fails) == 1:
-                    if  lineIP == getattr(fails[0], 'ipNumber'):
+                    if lineIP == getattr(fails[0], 'ipNumber'):
                         newCount = getattr(fails[0], 'failCount')
                         newCount += 1
                         setattr(fails[0], 'failCount', newCount)
@@ -48,10 +48,11 @@ def countAttacks(logName):
                         setattr(fails[x], 'failCount', newCount)   
 
 
-    print("\nSize: " +str(len(fails)))
+    # print("\nSize: " +str(len(fails)))
+    fails.sort(key = lambda x: x.failCount)
     for obj in fails:
         if getattr(obj, 'failCount') >= 10:
-           print("IP: " + getattr(obj, 'ipNumber') + "    FailCount: " + str(getattr(obj, 'failCount')) + "\n")        
+           print(str(getattr(obj, 'failCount')).ljust(16) + str(getattr(obj, 'ipNumber')).ljust(22) + str(getattr(obj, 'ipCountry')) + "\n")        
 
 
             # lineNum += 1
@@ -65,11 +66,15 @@ def main():
     today = date.today() # Sets today variable to the current date
     dateVal = str(today.strftime("%B %d, %Y")) # Formats the display of the date
     print("\n\033[92mSystem Report\033[0m -", dateVal)
-    print("\n\n")
+    print("\n")
     fileName = "syslog" # Creates a sys report variable
     fileExtension = "log" # Creates a variable for the file extension
     logFile = f'{fileName}.{fileExtension}' # Constructs the file name
     filePath = "/home/student/Downloads/System-Administration-Scripts/Attacker-Report/" + logFile
+    header = "\u001b[4mCOUNT\u001b[0m"
+    header2 ="\u001b[4mIP ADDRESS\u001b[0m"
+    header3 ="\u001b[4mCOUNTRY\u001b[0m"
+    print(header.ljust(24) + header2.ljust(30) + header3.ljust(20) + "\n")
     countAttacks(filePath)
 
 if __name__ == "__main__":
