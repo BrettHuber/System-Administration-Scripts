@@ -4,9 +4,11 @@
 #Date: 17 October 2022
 
 # Variable
+from operator import ge
 import os
 import re
 from datetime import date
+from geoip import geolite2
 
 ipFormat = re.compile(r'(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})')
 
@@ -17,7 +19,6 @@ class Fail:
         self.ipNumber = ipNumber
         self.ipCountry = ipCountry
 
-
 def countAttacks(logName):    
     fails = []
     with open(logName, 'r') as file:
@@ -26,27 +27,31 @@ def countAttacks(logName):
             line = file.readline()
             if "Failed password" in line:
                 lineIP = ipFormat.search(line)[0]
+                country = ""
+                geo = geolite2.lookup(lineIP)
+                if geo is not None: 
+                    country = geo.country
                 if len(fails) == 0:
-                    fails.append(Fail(lineIP,"US"))
+                    fails.append(Fail(lineIP,country))
                 elif len(fails) == 1:
                     if lineIP == getattr(fails[0], 'ipNumber'):
                         newCount = getattr(fails[0], 'failCount')
                         newCount += 1
                         setattr(fails[0], 'failCount', newCount)
                     else: 
-                        fails.append(Fail(lineIP,"US"))
+                        fails.append(Fail(lineIP,country))
                 else:
                     checkCount = 0
                     for x in range(len(fails)):
                         if lineIP == getattr(fails[x], 'ipNumber'):
                             checkCount = x
+                            break
                     if checkCount == 0:
-                        fails.append(Fail(lineIP,"US"))
+                        fails.append(Fail(lineIP,country))
                     else:
                         newCount = getattr(fails[x], 'failCount')
                         newCount += 1
                         setattr(fails[x], 'failCount', newCount)   
-
 
     # print("\nSize: " +str(len(fails)))
     fails.sort(key = lambda x: x.failCount)
