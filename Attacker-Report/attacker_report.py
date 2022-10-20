@@ -55,6 +55,10 @@ def countAttacks(logName):
 
     # print("\nSize: " +str(len(fails)))
     fails.sort(key = lambda x: x.failCount)
+    header = "\u001b[4mCOUNT\u001b[0m"
+    header2 ="\u001b[4mIP ADDRESS\u001b[0m"
+    header3 ="\u001b[4mCOUNTRY\u001b[0m"
+    print("\n\033[91m" + header.ljust(24) + "\033[0m\033[91m" + header2.ljust(30) + "\033[0m\033[91m" + header3.ljust(20) + "\033[0m\n")
     for obj in fails:
         if getattr(obj, 'failCount') >= 10:
            print(str(getattr(obj, 'failCount')).ljust(16) + str(getattr(obj, 'ipNumber')).ljust(22) + str(getattr(obj, 'ipCountry')) + "\n")        
@@ -71,15 +75,10 @@ def main():
     today = date.today() # Sets today variable to the current date
     dateVal = str(today.strftime("%B %d, %Y")) # Formats the display of the date
     print("\n\033[92mSystem Report\033[0m -", dateVal)
-    print("\n")
     fileName = "syslog" # Creates a sys report variable
     fileExtension = "log" # Creates a variable for the file extension
     logFile = f'{fileName}.{fileExtension}' # Constructs the file name
     filePath = "/home/student/Downloads/System-Administration-Scripts/Attacker-Report/" + logFile
-    header = "\u001b[4mCOUNT\u001b[0m"
-    header2 ="\u001b[4mIP ADDRESS\u001b[0m"
-    header3 ="\u001b[4mCOUNTRY\u001b[0m"
-    print(header.ljust(24) + header2.ljust(30) + header3.ljust(20) + "\n")
     countAttacks(filePath)
 
 if __name__ == "__main__":
