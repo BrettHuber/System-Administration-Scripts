@@ -41,12 +41,12 @@ def countAttacks(logName):
                     else: 
                         fails.append(Fail(lineIP,country))
                 else:
-                    checkCount = 0
+                    checkCount = -1
                     for x in range(len(fails)):
                         if lineIP == getattr(fails[x], 'ipNumber'):
                             checkCount = x
                             break
-                    if checkCount == 0:
+                    if checkCount == -1:
                         fails.append(Fail(lineIP,country))
                     else:
                         newCount = getattr(fails[x], 'failCount')
