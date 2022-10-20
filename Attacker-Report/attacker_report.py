@@ -58,11 +58,11 @@ def countAttacks(logName):
     header = "\u001b[4mCOUNT\u001b[0m"
     header2 ="\u001b[4mIP ADDRESS\u001b[0m"
     header3 ="\u001b[4mCOUNTRY\u001b[0m"
-    print("\n\033[91m" + header.ljust(24) + "\033[0m\033[91m" + header2.ljust(30) + "\033[0m\033[91m" + header3.ljust(20) + "\033[0m\n")
+    print("\n\033[91m" + header.ljust(24) + "\033[0m\033[91m" + header2.ljust(30) + "\033[0m\033[91m" + header3.ljust(20) + "\033[0m")
     for obj in fails:
         if getattr(obj, 'failCount') >= 10:
-           print(str(getattr(obj, 'failCount')).ljust(16) + str(getattr(obj, 'ipNumber')).ljust(22) + str(getattr(obj, 'ipCountry')) + "\n")        
-
+           print(str(getattr(obj, 'failCount')).ljust(16) + str(getattr(obj, 'ipNumber')).ljust(22) + str(getattr(obj, 'ipCountry')))        
+    print("\n")
 
             # lineNum += 1
             # if lineNum == 3:
